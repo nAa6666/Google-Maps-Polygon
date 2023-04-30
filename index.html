@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps Polygon</title>
+    <meta property="og:locale" content="en_US">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=KEY"></script>
+</head>
+<body>
+    <div id="map" style="width: 800px;height: 600px;"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: { lat: 47.5905895, lng: 37.4652267 }
+            });
+
+            new google.maps.Polygon({
+                paths: [
+                    { "lat": 47.56647082354131, "lng": 37.443238147270556 },
+                    { "lat": 47.56870042347332, "lng": 37.4436243853687 },
+                    { "lat": 47.5692505698966, "lng": 37.44735802031743 },
+                    { "lat": 47.571856448121835, "lng": 37.446242221367235 },
+                    { "lat": 47.576141388170846, "lng": 37.45705688811528 },
+                    { "lat": 47.590325511955704, "lng": 37.47988785125005 },
+                    { "lat": 47.582104977830284, "lng": 37.49705398894536 },
+                    { "lat": 47.582104977830284, "lng": 37.506924518120165 },
+                    { "lat": 47.575504459809075, "lng": 37.51035774565923 },
+                    { "lat": 47.57643089850143, "lng": 37.52945507384526 },
+                    { "lat": 47.58980453050695, "lng": 37.514134295952196 },
+                    { "lat": 47.60520023822679, "lng": 37.51945579863774 },
+                    { "lat": 47.61550009917044, "lng": 37.51207435942876 },
+                    { "lat": 47.61590510842792, "lng": 37.523404010307665 },
+                    { "lat": 47.62412033323999, "lng": 37.51936996794927 },
+                    { "lat": 47.62978924257021, "lng": 37.500916369926806 },
+                    { "lat": 47.62313688843113, "lng": 37.502032168877 },
+                    { "lat": 47.62284763643686, "lng": 37.488728412163134 },
+                    { "lat": 47.617177974243134, "lng": 37.48585308409917 },
+                    { "lat": 47.604910887000074, "lng": 37.468000300896044 },
+                    { "lat": 47.6027117653703, "lng": 37.463451274406786 },
+                    { "lat": 47.59200419467903, "lng": 37.464009173881884 },
+                    { "lat": 47.575504459809075, "lng": 37.43688667632329 }
+                ],
+                strokeColor: "#5390d9",
+                strokeOpacity: 1,
+                strokeWeight: 4,
+                fillColor: "#ffd60a",
+                fillOpacity: 0.45,
+            }).setMap(map);
+        });
+    </script>
+</body>
+</html>
